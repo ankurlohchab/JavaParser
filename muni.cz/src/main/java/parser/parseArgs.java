@@ -32,8 +32,20 @@ public static void validateArgs(String[]args)
         }
     }
 
-    //TODO validate if the arguments in correct order
-    // TODO flag error if unvalid arguments
-    // TODO Display help for args format
 
+    public static String getInputLocation(String[] args) {
+    return args[1];
+    }
+
+    public static String getManipulations(String[] args) {
+    return args[3];
+    }
+
+    public static String getOutType(String[] args) {
+    return args[5];
+    }
+
+    public static String getOutLoc(String[] args) {
+    return args[6];
+    }
 }
