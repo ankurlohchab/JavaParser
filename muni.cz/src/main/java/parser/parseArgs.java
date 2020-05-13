@@ -5,8 +5,18 @@ public class parseArgs {
 public static void validateArgs(String[]args)
 {
     checkForHelp(args);
+    try
+    {
+        if(!(args[0].matches("-d") && (!args[1].isEmpty())  && args[2].matches("-m") && (!args[3].isEmpty()) && args[4].matches("-o")  && (!args[5].isEmpty()) && (!args[6].isEmpty()) ))
+            throw new IllegalArgumentException("illegal arguemtns");
+    }
+    catch (IllegalArgumentException | ArrayIndexOutOfBoundsException iae)
 
-    
+    {
+        System.out.println("exiting...Please pass the arguements in the format -d [DATASETLOCATION] -m [MANIPULATIONMETHODS]-o [OUTPUTTYPE] [OUTPUTFILE]!");
+        System.exit(0);
+    }
+
 }
 
     private static void checkForHelp(String[] args) {
