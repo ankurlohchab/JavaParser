@@ -10,6 +10,7 @@ public String output_loc;
     public void run(String[] args) {
     parseArgs.validateArgs(args);
     getArgsData(args);
+    new processInput(input_loc,manipulations,out_type,output_loc).processFileData();
 
 
     }

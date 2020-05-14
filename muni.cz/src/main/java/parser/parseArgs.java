@@ -7,7 +7,8 @@ public static void validateArgs(String[]args)
     checkForHelp(args);
     try
     {
-        if(!(args[0].matches("-d") && (!args[1].isEmpty())  && args[2].matches("-m") && (!args[3].isEmpty()) && args[4].matches("-o")  && (!args[5].isEmpty()) && (!args[6].isEmpty()) ))
+
+        if(!(args[0].matches("-d") && (!args[1].isEmpty())  && args[2].matches("-m") && (!args[3].isEmpty()) && args[4].matches("-o")  && (args[5].matches("text")) && (!args[6].isEmpty()) ))
             throw new IllegalArgumentException("illegal arguemtns");
     }
     catch (IllegalArgumentException | ArrayIndexOutOfBoundsException iae)
